@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+     <!--لجعل الموقع متجاوب مع الموبايل عرض الصفحة مساوي لعرض الجهاز-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- عنوان الصفحة يظهر في تبويب الصفحة-->
+    <title>منصة نفسيتي - دعم نفسي واجتماعي</title>
+    <!-- Bootstrap 5 CSS -->
+    <!-- اطار جاهز للتصميم يوفر -ازرار- فورمات  grid- responsive-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!--  قلب هاتف ايميل فيسبوكFont Awesome الايقونات-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts - Arabic  خط العربي وسمكه-->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+   <!--التصميم الاساسي -->
+    <link rel="stylesheet" href="css/style.css"> 
+    <!--تعدبلات الشاشات الصغيرة موبايل او تابلت-->
+    <link rel="stylesheet" href="css/responsive.css">
+    
+    <!-- jQuery -->
+    <!--مكتبة js للتعامل مع DOM والاحداث والتحريك-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+
+    <!-- Header & Navigation -->
+<body>
+   <!--الهيدر يضل ثابت فوق عند التمرير-->
+    <header class="sticky-top"> 
+        <!-- navbar من bootstrap 
+        ألوان فاتحة خلفية بيضاء يفتح كامل فقط في الشاشات الكبيرة وظل خفيف -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+            <!--يحصر العرض ويخليه مرتب بعرض منظم-->
+            <div class="container">
+                <!--عند الضغط يرجع لاعلى الصفحة عند هوم-->
+                <a class="navbar-brand" href="#home">
+                    <!--ايقونة صلبة قلب   لون ازرق  مسافة من اليمين -->
+                    <i class="fas fa-heart text-primary me-2"></i>
+                    <!-- اسم المنصة بخط عريض-->
+                    <span class="fw-bold">نفسيتي</span>
+                </a>
+                <!--زر الموبايل يظهر على الشاشات الصغيرة  وفتح وغلق القائمة-->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <!-- أيقونة تلقائية من بوتستراب-->
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!--  الجزء الذي يفتح ويغلق روابط التنقل-->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                <!--تعيين الروابط على اليسار -->
+                    <ul class="navbar-nav ms-auto">
+                    <!--عنصر قائمة ينقلك للقسم نفسه داخل الصفحة -->
+                        <li class="nav-item">  
+                            <a class="nav-link active" href="#home">الرئيسية</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">عن المنصة</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#services">خدماتنا</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#articles">مقالات</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#therapists">المتخصصون</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#resources">موارد مساعدة</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">تواصل معنا</a>
+                        </li>
+                    </ul>
+                    
+                    <!-- Dark Mode Toggleزر تغيير الوضع الليلي -->
+                    <button class="btn btn-outline-secondary ms-3" id="darkModeToggle">
+                    <!--أيقونة القمر -->
+                        <i class="fas fa-moon"></i> 
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+                <!--اول جزء يشوفه المستخدم لربط التنقل -->
+    <section id="home" class="hero-section">
+        <div class="container">
+                <!--صف bootstrap 
+                توسيط عمودي-->
+            <div class="row align-items-center">
+                    <!-- عمود مصف الصفحة في الشاشات الكبيرة-->
+                <div class="col-lg-6">
+                <!--عنوان كبير خط عريض مسافة أسفل-->
+                    <h1 class="display-4 fw-bold mb-4">رعاية نفسية في متناول يديك</h1>
+                    <!-- نص تعريفي خط أكبر -->
+                    <p class="lead mb-4">منصة عربية تقدم الدعم النفسي والاجتماعي للمتأثرين بالأزمات والحروب. نحن هنا لنساعدك على التعافي واستعادة توازنك النفسي.</p>
+                    <!-- فلكس بوكس مسافة بين الأزرار -->
+                    <div class="d-flex gap-3">
+                   <!--زر بلون بوتستراب كبير-->
+                        <a href="#contact" class="btn btn-primary btn-lg">
+                            <i class="fas fa-calendar-check me-2"></i>حجز جلسة
+                        </a>
+                        <a href="#resources" class="btn btn-outline-primary btn-lg">
+                            <i class="fas fa-book me-2"></i>موارد مجانية
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                <!--الصورة تتجاوب مع الحجم-->
+                    <img src="./imges/f3625c44-e82d-4bd4-b7c4-0037c9e48566.jpg" alt="الدعم النفسي" class="img-fluid" id="heroImage">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+                <!--مسافة فوق وتحت   خلفية فاتحة-->
+    <section id="about" class="py-5 bg-light">
+             <!--ترتيب  يحدد عرض المحتوى يوسطه بالصفحة يجعل التصميم متجاوب-->
+        <div class="container"> 
+                    <!--  عنوان رئيسي للقسم توسيط النص افقيا مسافة كببيرة تحت النص لفصل المحتوى-->
+            <h2 class="text-center mb-5">عن منصة "نفسيتي"</h2>
+                    <!-- تقسيم الصفحة لاعمدة-->
+            <div class="row">
+                    <!-- تلاثة اعمدة على الشاشات المتوسطة وأكبر مسافة12 كرا بالصف ومسافة تحت الكرت-->
+                <div class="col-md-4 mb-4">
+                <!--نفس لارتفاع ظل خفيف توسيط النص والايقونة ازالة الاطار الافتراضي-->
+                    <div class="card h-100 text-center border-0 shadow-sm">
+                    <!-- حاوية محتوى النص اي نص ايقونة عنوان يكتب داخلها-->
+                        <div class="card-body">
+                            <!--أيقونة اكبر ب3 باللون الاساسي للموقع ومسافة تحت الايقونة -->
+                            <i class="fas fa-shield-alt fa-3x text-primary mb-3"></i>
+                            <!--عنوات الكرت -->
+                            <h4 class="card-title">سرية تامة</h4>
+                           <!--نص وصفي -->
+                            <p class="card-text">جميع الجلسات والاستشارات تتم بخصوصية كاملة، مع الحفاظ على سرية المعلومات.</p>
+                        </div>
+                    </div>
+                </div>
+                    <!-- تلاثة اعمدة على الشاشات المتوسطة وأكبر مسافة12 كرا بالصف ومسافة تحت الكرت-->
+                <div class="col-md-4 mb-4">
+                <!--نفس لارتفاع ظل خفيف توسيط النص والايقونة ازالة الاطار الافتراضي-->
+                    <div class="card h-100 text-center border-0 shadow-sm">
+                    <!-- حاوية محتوى النص اي نص ايقونة عنوان يكتب داخلها-->
+                        <div class="card-body">
+                            <!--أيقونة اكبر ب3 باللون الاساسي للموقع ومسافة تحت الايقونة -->
+                            <i class="fas fa-users fa-3x text-primary mb-3"></i>
+                            <!--عنوات الكرت -->
+                            <h4 class="card-title">متخصصون مرخصون</h4>
+                           <!--نص وصفي -->
+                            <p class="card-text">فريق من الأطباء والمعالجين النفسيين المؤهلين وذوي الخبرة.</p>
+                        </div>
+                    </div>
+                </div>
+                    <!-- تلاثة اعمدة على الشاشات المتوسطة وأكبر مسافة12 كرا بالصف ومسافة تحت الكرت-->
+                <div class="col-md-4 mb-4">
+                <!--نفس لارتفاع ظل خفيف توسيط النص والايقونة ازالة الاطار الافتراضي-->
+                    <div class="card h-100 text-center border-0 shadow-sm">
+                    <!-- حاوية محتوى النص اي نص ايقونة عنوان يكتب داخلها-->
+                        <div class="card-body">
+                            <!--أيقونة اكبر ب3 باللون الاساسي للموقع ومسافة تحت الايقونة -->
+                            <i class="fas fa-heartbeat fa-3x text-primary mb-3"></i>
+                            <!--عنوات الكرت -->
+                            <h4 class="card-title">دعم مجتمعي</h4>
+                           <!--نص وصفي -->
+                            <p class="card-text">مجموعات دعم وورش عمل تفاعلية للتعافي الجماعي.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+     <!-- معرف فريد للتنقل من القائمة اعلى واسفل بمسافة 5-->
+    <section id="services" class="py-5">
+     <!-- لتحديد عرض المحتوى وتوسيطه وجعله متجاوب مع كل الشاشات-->
+        <div class="container">
+          <!-- عنوان القسم الرئيسي مع توسيط العنوان ومسافة تحت العنوان-->
+            <h2 class="text-center mb-5">خدماتنا</h2>
+           <!-- بداية نظام الاعمدة  هاد المكان اللي الجافا بتعبي البيانات فيه ديناميكيا-->
+            <div class="row" id="services-container">
+            </div>
+        </div>
+    </section>
+
+    <!-- Articles Section with Accordion -->
+     <!-- للتنقل من النافبار مسافة داخلية من الاعلى والاسفل خلفية فاتحة -->
+    <section id="articles" class="py-5 bg-light">
+        <!-- تحديد عرض المحتوى وتوسيطه ويجعله متجاوب مع جميع الشاشات-->
+        <div class="container">
+          <!--عنوان رئيسي مع التوسيط ومسافة كبيرة أسفل العنوان -->
+            <h2 class="text-center mb-5">مقالات ونصائح نفسية</h2>
+            
+            <!-- Articles Filter أزرار الفلترة  -->
+            <!-- كل الازرار بالمنتصف مع مسافة تحت الأزرار-->
+            <div class="text-center mb-4">
+                  <!--   زر بإطار أزرق دون تعبئة كلاس مخصص للجافا يلتقط كل الازرار اللي الها هذا الكلاس جافا-->
+                <button class="btn btn-outline-primary filter-article active" data-category="all">الكل</button>
+                <button class="btn btn-outline-primary filter-article" data-category="anxiety">القلق</button>
+                <button class="btn btn-outline-primary filter-article" data-category="depression">الاكتئاب</button>
+                <button class="btn btn-outline-primary filter-article" data-category="trauma">الصدمات</button>
+                <button class="btn btn-outline-primary filter-article" data-category="children">دعم الأطفال</button>
+            </div>
+            
+            <!-- Articles Container مكان الي الجافا عيحط المقالات فيه ديناميكيا نظام أعمدة -->
+            <div class="row" id="articles-container">
+            </div>
+            
+            <!-- FAQ Accordion -->
+                <!--مسافة من الاعلى فصل بين المقالات والاسئلة -->
+            <div class="mt-5">
+                <!-- عنوان فرعي بالمنتصف-->
+                <h3 class="text-center mb-4">أسئلة شائعة</h3>
+                 <!--  الاسئلة بتتعبى من جافا    -يحتاج للتحكم بوتستراب وجافا-->
+                <div class="accordion" id="faqAccordion">
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Therapists Section -->
+     <!--  اسم القسم للربط   -كلاس من بوتستراب مع تباعد5-->
+    <section id="therapists" class="py-5">
+        <!-- تحديد عرض المحتوى وتوسيطه ويجعله متجاوب مع جميع الشاشات-->
+        <div class="container">
+          <!-- عنوان القسم الرئيسي مع توسيط العنوان ومسافة تحت العنوان-->
+            <h2 class="text-center mb-5">فريق المتخصصين</h2>
+            <!--صف من نظام قريد في البوتستراب  - سيتم ملؤه ديناميكيا من جافا سكريبت-->
+            <div class="row" id="therapists-container">
+                <!-- Therapists will be loaded dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Resources Section -->
+     <!--ربط من القائمة-مسافة عمودية -خلفية فاتحة-->
+    <section id="resources" class="py-5 bg-light">
+     <!--توسيط المحتوى مع تحديد العرض وجعله متجاوب مع جميع الشاشات-->
+        <div class="container">
+              <!-- عنوان القسم مع توسيط ومسافة أسفله-->
+            <h2 class="text-center mb-5">فيديوهات دعم نفسي</h2>
+            <!--صف مسافة تحت الفيديو-->
+            <div class="row mb-5">
+                <!--عمود بعرض 8 في الشاشات الكبيرة-->
+                <div class="col-lg-8 mx-auto">
+                    <!--للتنسيق ابعاد الفيديو-->
+                    <div class="video-container">
+                     <!-- عنصر الفيديو مع التحكم فيه بالجافا مع ازرار التحكم والعرض وحواف دائرية وظل خفيف-->
+                        <video id="mainVideo" controls class="w-100 rounded shadow" poster="imges/pc.jpeg">
+                              <!--الفيديو-->
+                            <source src="./video/video.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+            </div>
+             <!--صف جديد يظهر به فيديوهات مصغرة من جافا - المحتوى ديناميكي-->
+            <div class="row" id="video-playlist">
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+     <!--  اسم القسم للربط   -كلاس من بوتستراب مع تباعد5-->
+    <section id="contact" class="py-5">
+        <!-- تحديد عرض المحتوى وتوسيطه ويجعله متجاوب مع جميع الشاشات-->
+        <div class="container">
+             <!--صف من نظام بوتستراب في قريد يحتوي الاعمدة-->
+            <div class="row">
+                <!--عمود بعرض 6 للشاشات الكبيرة مع مسافة أسفل العمود-->
+                <div class="col-lg-6 mb-4">
+                <!--عنوان العمود مع مسافة أسفل العنوان-->
+                    <h2 class="mb-4">حجز جلسة دعم</h2>
+                <!--وصف قصير مع مسافة تحت النص-->
+                    <p class="mb-4">املأ النموذج وسنتصل بك خلال 24 ساعة لتأكيد الموعد المناسب لك.</p>
+                   <!--لتجميع الايقونات والنص-->
+                    <div class="contact-info">
+                       <!--عرض افقي  محاذاة الايقونةوالنص  عموديا  مسافة تحت السطر-->
+                
+                        <div class="d-flex align-items-center mb-3">
+                          <!--أيقونة فون لون ازرق من بوتستراب ومسافة بين الايقونة والنص-->
+                            <i class="fas fa-phone-alt text-primary me-3"></i>
+                            <span> +972 59 3212070 </span>
+                        </div>
+                       <!--عرض افقي  محاذاة الايقونةوالنص  عموديا  مسافة تحت السطر-->
+                        <div class="d-flex align-items-center mb-3">
+                          <!--أيقونة فون لون ازرق من بوتستراب ومسافة بين الايقونة والنص-->
+                            <i class="fas fa-envelope text-primary me-3"></i>
+                            <span>ayaahmedhadda87@gmail.com</span>
+                        </div>
+                       <!--عرض افقي  محاذاة الايقونةوالنص  عموديا -->
+                        <div class="d-flex align-items-center">
+                          <!--أيقونة فون لون ازرق من بوتستراب ومسافة بين الايقونة والنص-->
+                            <i class="fas fa-clock text-primary me-3"></i>
+                            <span>من الساعة 9 صباحاً حتى 5 مساءً</span>
+                        </div>
+                    </div>
+                </div>
+                <!--عمود بعرض 6 للشاشة -->
+                <div class="col-lg-6">
+                   <!--بداية النموذج بوتستراب يمنع التحقق الافتراضي للمتصفح-->
+                    <form id="sessionForm" class="needs-validation" novalidate>
+                      <!--صف داخلي لكل الحقول مسافة 3 بين الأعمدة-->
+                        <div class="row g-3">
+                           <!--عمود بعرض 6-->
+                            <div class="col-md-6">
+                             <!--نص الحقل -->
+                                <label for="fullName" class="form-label">الاسم الكامل *</label>
+                             <!-- مطلوب-->
+                                <input type="text" class="form-control" id="fullName" required>
+                             <!--  تظهر عند ترك الحقل فارغ-->
+                                <div class="invalid-feedback">يرجى إدخال الاسم الكامل</div>
+                            </div>
+
+                                <!--عمود بعرض 6 للشاشة -->
+                            <div class="col-md-6">
+                             <!--نص الحقل  - ربط التسمية بحقل الادخال-->
+                                <label for="phone" class="form-label">رقم الهاتف *</label>
+                             <!-- مطلوب - حقل ادخال رقم الهاتف-->
+                                <input type="tel" class="form-control" id="phone" required>
+                             <!--  تظهر عند ترك الحقل فارغ او لم  يكن صحيح -->
+                                <div class="invalid-feedback"> 0593212070 </div>
+                            </div>
+                             <!--عرض كامل للشاشة 12 -->
+                            <div class="col-12">
+                             <!-- تسمية حقل البريد - ربط تسمية اليريد بحقل الادخال-->
+                                <label for="email" class="form-label">البريد الإلكتروني</label>
+                             <!-- حقل الادخال يمكن تركه فارغ ليس الزامي-->
+                                <input type="email" class="form-control" id="email">
+                            </div>
+                             
+
+                             <!--عرض كامل عمود كامل للشاشة 12 -->
+                            <div class="col-12">
+                             <!-- *تسمية لحقل اختيار نوع الجلسة وربط التسميه بالحقل -- وهو الزامي -->
+                                <label for="sessionType" class="form-label">نوع الجلسة *</label>
+                             <!--  وهو الزامي مطلوب -حقل قائمة منسدلة ومعرف الحقل للربط والتحقق باستخدام جافا-->
+                                <select class="form-select" id="sessionType" required>
+                                    <!-- خيار افتراضي يظهر قل اختيار اي شيء -القيمة الفارغة ليست خيار صحيح
+                                     يتم الاختيار تلقائي عند تحميل الصفحة- يمنع المستخدم من اعادة اختياره بعد فتح القائمة-->
+                                    <option value="" selected disabled>اختر نوع الجلسة</option>
+                                     <!-- خيارات القائمة التي يمكن للمستخدم اختيارها-->
+                                    <option value="individual">جلسة فردية</option>
+                                    <option value="family">جلسة عائلية</option>
+                                    <option value="group">جلسة جماعية</option>
+                                    <option value="emergency">استشارة طارئة</option>
+                                </select>
+                             <!--  رسالة خطا تظهر تلقائيا اذا لم يختار المستخدم اي خيار-->
+                                <div class="invalid-feedback">يرجى اختيار نوع الجلسة</div>
+                            </div>
+                             <!-- عمود كامل-->
+                            <div class="col-12">
+                             <!-- تسمية لحقل الرسالة الاضافية وتربط التسمية بالحقل وهي  اختيارية-->
+                                <label for="message" class="form-label">رسالة إضافية (اختياري)</label>
+                             <!--حقل لادخال نص طويل ارتفاعه 3 صفوف  -->
+                                <textarea class="form-control" id="message" rows="3" placeholder="أخبرنا عن أي معلومات إضافية تريد مشاركتها..."></textarea>
+                            </div>
+
+                             <!--عمود كامل يستخدم للحقل الاخير مربع الاختيار  للموافقة على الشروط -->
+                            <div class="col-12">
+                             <!-- بوتستراب باستخدام مربع لاختيار -->
+                                <div class="form-check">
+                                  <!-- حقل مربع الاختيار للموافقة على الشروط المستخدم ملزم بالموافقة قبل الارسال -->
+                                    <input class="form-check-input" type="checkbox" id="agreeTerms" required>
+                                  <!--تسمية مربع لاختيار تظهر جانبه تحتوي على رابط يفتح مودل يعرض الشروط ويربط التسمية بالحقل-->
+                                    <label class="form-check-label" for="agreeTerms">
+                                        أوافق على <a href="#" data-bs-toggle="modal" data-bs-target="#termsModal">شروط الخصوصية والاستخدام</a>
+                                    </label>
+                                  <!--رسالة خطا اذا لم يضع المستخدم علامة موافقة -->
+                                    <div class="invalid-feedback">يجب الموافقة على الشروط</div>
+                                </div>
+                            </div>
+                             <!-- عمود كامل للزر النهائي لارسال النموئج-->
+                            <div class="col-12">
+                             <!--در لارسال البيانات باللون الاساسي ويملأ عرض العمود بالكامل  -->
+                                <button type="submit" class="btn btn-primary w-100">
+                                    <!--أيقونة طائرة ورقية قبل نص الزر -->
+                                    <i class="fas fa-paper-plane me-2"></i>إرسال طلب الحجز
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                    
+                    <!-- Form Status Message رسالة حالة بعد ارسال النموذج صح ام خطا يمكن التحقق منه وتغييره باستخدام جافا -->
+                    <div id="formMessage" class="alert mt-3 d-none"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Terms Modal -->
+    <!-- يحدد كمودل لتأثير الاختفاء والظهور بسلاسة-
+     معرف المودل لربطه مع الزر في الفورم
+     يمنع التركيزعلى المودل عند تحمبل الصفحة -->
+    <div class="modal fade" id="termsModal" tabindex="-1">
+    <!-- يمثل صندوق الحوالر الداخلي للمودل يحدد حجم وكان المحتوى داخل المودل -->
+        <div class="modal-dialog">
+              <!--محتوى المودل نفسه راس جسم تذليل  -->
+            <div class="modal-content">
+              <!--  راس المودل يحتوي العنوان وزر الاغلاق-->
+                <div class="modal-header">
+                  <!--  عنوان المودل يظهر في الاعلى-->  
+                    <h5 class="modal-title">شروط الخصوصية والاستخدام</h5>
+                  <!--  زر اغلاق المودل لتجنب ارسال اي نموذج عند الضغط-->  
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                  <!--   جسم المودل يحتوي على نص الشروط-->  
+                <div class="modal-body">
+                    <p>نحن نحترم خصوصيتك ونلتزم بحماية معلوماتك الشخصية. جميع الجلسات سرية ولا يتم مشاركة أي معلومات مع أطراف ثالثة بدون موافقتك.</p>
+                    <p>يتم تخزين البيانات بشكل آمن وتستخدم فقط لغرض تقديم الخدمات النفسية المناسبة.</p>
+                    <p>في حالات الطوارئ أو عندما يكون هناك خطر على حياة المستخدم، قد نتواصل مع الجهات المختصة لتقديم المساعدة اللازمة.</p>
+                </div>
+                  <!-- تذليل المودل يحتوي عادة ازرار تحكم -->  
+                <div class="modal-footer">
+                  <!--  زر اغلاق المودل له تنسيق ثانوي يغلق المودل حالة الضغط عليه-->  
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">إغلاق</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+        <!-- خلفية داكنة نص ابيض اعلى واسفل مقدار 5 -->  
+    <footer class="bg-dark text-white py-5">
+        <!-- بتجميع كل محتويات الفوتر وتوسيطها مع مساحة جانبية -->  
+        <div class="container">
+        <!--  صف لتقسيم محتويات الفوتر لأعمدة--> 
+            <div class="row">
+                   <!-- عمود بعرض 4 على الشاشة الكبيرة مع مسافة اسفل العمود -->  
+                <div class="col-lg-4 mb-4">
+                  <!-- عنوان العمود -->  
+                    <h5 class="mb-3">
+                       <!-- ايقونة قلب زرقاء مسافة صغيرة على اليمين ومسافة اسفل العنوان -->  
+                        <i class="fas fa-heart text-primary me-2"></i>
+                        منصة نفسيتي
+                    </h5>
+                    <p>منصة عربية لتقديم الدعم النفسي والاجتماعي للمتأثرين بالأزمات والحروب.</p>
+                    <!-- ايقونات وسائل التواصل لاجتماعي باللون الابيض مع مسافة بين كل ايقونة -->  
+                    <div class="social-icons mt-3">
+                        <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                 <!-- عمود بعرض 2 من 12 على الشاشات الكبيرة و 6 من 12 على الشاشات المتوسطة ومسافة اسفل4 -->  
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <!--عنوان العمود-->
+                    <h5 class="mb-3">روابط سريعة</h5>
+                    <!-- قائمة روابط مع ازالة النقاط من القائمة-->
+                    <ul class="list-unstyled">
+                    <!--لون ابيض شفاف و ازالة التسطير-->
+                        <li class="mb-2"><a href="#home" class="text-white-50 text-decoration-none">الرئيسية</a></li>
+                        <li class="mb-2"><a href="#services" class="text-white-50 text-decoration-none">خدماتنا</a></li>
+                        <li class="mb-2"><a href="#articles" class="text-white-50 text-decoration-none">مقالات</a></li>
+                        <li><a href="#contact" class="text-white-50 text-decoration-none">تواصل معنا</a></li>
+                    </ul>
+                </div>
+                 <!-- عمود بعرض3 من 12 على الشاشات الكبيرة و 6 من 12 على الشاشات المتوسطة ومسافة اسفل4 -->  
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <!--عنوان العمود-->
+                    <h5 class="mb-3">خدمات الطوارئ</h5>
+                    <!--إزالة النقاط من القائمة-->
+                    <ul class="list-unstyled">
+                        <li class="mb-2">
+                            <i class="fas fa-phone-alt text-primary me-2"></i>
+                            خط الدعم السريع: 1234
+                        </li>
+                        <li class="mb-2">
+                            <i class="fas fa-hands-helping text-primary me-2"></i>
+                            الدفاع المدني: 102
+                        </li>
+                        <li>
+                            <i class="fas fa-ambulance text-primary me-2"></i>
+                            الإسعاف: 101
+                        </li>
+                    </ul>
+                </div>
+                 <!-- عمود بعرض3 من 12 على الشاشات الكبيرة و 6 من 12 على الشاشات المتوسطة ومسافة اسفل4 -->  
+                <div class="col-lg-3 mb-4">
+                    <!--عنوان العمود-->
+                    <h5 class="mb-3">اشترك في النشرة</h5>
+                    <p>احصل على نصائح نفسية أسبوعية</p>
+                    <!--حقل ادخال-->
+                    <div class="input-group">
+                        <!--حقل لادخال البريد الالكتروني له تصميم احترافي -->
+                        <input type="email" class="form-control" placeholder="بريدك الإلكتروني">
+                        <!--زر ازرق لارسال البريد-->
+                        <button class="btn btn-primary" type="button">اشتراك</button>
+                    </div>
+                </div>
+            </div>
+             <!--خط افقي لونه ابيض شفاف للتفريق بين القسم العلوي والسفلي للفوتر-->
+            <hr class="bg-white-50">
+              <!--جعل النص في منتصف الفوتر اعلى بمقدار 3-->
+            <div class="text-center pt-3">
+                <p class="mb-0">© 2026 منصة نفسيتي. جميع الحقوق محفوظة.</p>
+              <!--فقرة بلون شفاف وحجم نص صغير-->
+                <p class="text-white-50 small">تم التطوير بدعم من مبادرة "الصحة النفسية للجميع"</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle -->
+        <!--يضيف جميع ملفات جافا الخاصة ب البوتستراب ومهم للقوائم المنسدلة-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS Files -->
+              <!--تحتوي بيانات ديناميكية للموقع -->
+    <script src="js/data.js"></script> 
+              <!--تحريك العناصر عند الظهور او التمرير-->
+    <script src="js/animations.js"></script>
+              <!--الكود الرئيسي لتشغيل التفاعلات-->
+    <script src="js/main.js"></script>
+</body>
+
+
