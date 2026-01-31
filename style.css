@@ -1,0 +1,503 @@
+/* style.css - الأنماط الرئيسية للموقع */
+
+/* متغيرات الألوان */
+:root {
+    --primary-color: #4a6fa5;
+    --secondary-color: #166088;
+    --accent-color: #ff6b6b;
+    --light-color: #f8f9fa;
+    --dark-color: #343a40;
+    --gray-color: #6c757d;
+    --light-blue: #e3f2fd;
+    --light-purple: #f3e5f5;
+    --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+/* إعدادات عامة */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Cairo', sans-serif;
+    line-height: 1.6;
+    color: var(--dark-color);
+    background-color: var(--light-color);
+    padding-top: 76px;
+    direction: rtl;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* التمرير الناعم */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--secondary-color);
+}
+
+/* ========== الهيدر والتنقل ========== */
+.sticky-top {
+    position: sticky;
+    top: 0;
+    z-index: 1020;
+}
+
+.navbar {
+    background-color: white !important;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    padding: 1rem 0;
+    transition: var(--transition);
+}
+
+.navbar-brand {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--primary-color) !important;
+}
+
+.navbar-brand i {
+    color: var(--accent-color);
+}
+
+.nav-link {
+    font-weight: 600;
+    padding: 0.5rem 1rem !important;
+    margin: 0 0.25rem;
+    border-radius: 50px;
+    transition: var(--transition);
+    color: var(--dark-color) !important;
+}
+
+.nav-link:hover, .nav-link.active {
+    background-color: var(--primary-color);
+    color: white !important;
+}
+
+.navbar-toggler {
+    border: none;
+    padding: 0.5rem;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+/* زر الوضع الليلي */
+#darkModeToggle {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ========== قسم الهيرو (Hero) ========== */
+.hero-section {
+    background: linear-gradient(135deg, var(--light-blue) 0%, var(--light-purple) 100%);
+    padding: 120px 0 80px;
+    position: relative;
+    overflow: hidden;
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+}
+
+.hero-section h1 {
+    color: var(--secondary-color);
+    font-size: 3.5rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+}
+
+.hero-section .lead {
+    color: var(--gray-color);
+    font-size: 1.4rem;
+    font-weight: 400;
+    margin-bottom: 2rem;
+}
+
+/* صورة الهيرو */
+#heroImage {
+    max-height: 450px;
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+    animation: float 6s ease-in-out infinite;
+    transition: var(--transition);
+    width: 100%;
+    object-fit: cover;
+}
+
+#heroImage:hover {
+    transform: scale(1.02);
+}
+
+@keyframes float {
+    0%, 100% { 
+        transform: translateY(0px); 
+    }
+    50% { 
+        transform: translateY(-20px); 
+    }
+}
+
+/* الأزرار */
+.btn {
+    border-radius: 50px;
+    padding: 0.75rem 2rem;
+    font-weight: 600;
+    transition: var(--transition);
+    border: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: var(--secondary-color);
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn-lg {
+    padding: 1rem 2.5rem;
+    font-size: 1.2rem;
+}
+
+.btn-outline-primary {
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    background: transparent;
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--primary-color);
+    color: white;
+    transform: translateY(-3px);
+}
+
+/* ========== قسم "عن المنصة" ========== */
+.bg-light {
+    background-color: #f8f9fa !important;
+}
+
+.card {
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+.card-body {
+    padding: 2rem;
+}
+
+.card-title {
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+}
+
+.card-text {
+    color: var(--gray-color);
+    line-height: 1.8;
+}
+
+/* ========== قسم الخدمات ========== */
+#services {
+    background-color: white;
+}
+
+#services-container {
+    gap: 1.5rem;
+}
+
+/* ========== قسم المقالات ========== */
+.filter-article {
+    margin: 0 5px 5px;
+    border-radius: 25px;
+    transition: var(--transition);
+}
+
+.filter-article.active {
+    background-color: var(--primary-color) !important;
+    color: white !important;
+    border-color: var(--primary-color) !important;
+}
+
+#articles-container {
+    gap: 1.5rem;
+}
+
+/* أكورديون الأسئلة الشائعة */
+.accordion-button {
+    font-weight: 600;
+    color: var(--secondary-color);
+    background-color: rgba(74, 111, 165, 0.05);
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.accordion-button:focus {
+    box-shadow: 0 0 0 0.25rem rgba(74, 111, 165, 0.25);
+}
+
+.accordion-body {
+    background-color: #f8f9fa;
+}
+
+/* ========== قسم المتخصصين ========== */
+.therapist-card {
+    text-align: center;
+    border: none;
+    border-radius: 15px;
+    padding: 2rem 1rem;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    background: white;
+}
+
+.therapist-card:hover {
+    transform: translateY(-10px);
+}
+
+/* ========== قسم الفيديوهات ========== */
+.video-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+}
+
+#mainVideo {
+    border-radius: 15px;
+}
+
+#video-playlist {
+    gap: 1.5rem;
+}
+
+/* ========== نموذج الاتصال ========== */
+#contact form {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+}
+
+.form-control, .form-select {
+    border: 2px solid #e9ecef;
+    border-radius: 10px;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    transition: var(--transition);
+    background-color: white;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.25rem rgba(74, 111, 165, 0.25);
+}
+
+.form-label {
+    font-weight: 600;
+    color: var(--secondary-color);
+    margin-bottom: 0.5rem;
+}
+
+.contact-info i {
+    width: 24px;
+}
+
+/* رسالة الحالة */
+#formMessage {
+    border-radius: 10px;
+}
+
+/* ========== المودل ========== */
+.modal-content {
+    border-radius: 15px;
+    border: none;
+}
+
+.modal-header {
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 15px 15px 0 0;
+}
+
+.modal-title {
+    font-weight: 700;
+}
+
+/* ========== الفوتر ========== */
+footer {
+    background: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-color) 100%);
+    color: white;
+}
+
+.social-icons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    margin-left: 10px;
+    transition: var(--transition);
+}
+
+.social-icons a:hover {
+    background: var(--accent-color);
+    transform: translateY(-3px);
+}
+
+footer a {
+    color: rgba(255, 255, 255, 0.8);
+    transition: var(--transition);
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: white;
+    padding-right: 5px;
+}
+
+.input-group .form-control {
+    border-radius: 50px 0 0 50px !important;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+.input-group .form-control::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.input-group .btn {
+    border-radius: 0 50px 50px 0 !important;
+}
+
+/* ========== تأثيرات خاصة ========== */
+.d-none {
+    display: none !important;
+}
+
+.mt-3 {
+    margin-top: 1rem !important;
+}
+
+.text-white-50 {
+    color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.text-decoration-none {
+    text-decoration: none !important;
+}
+
+.list-unstyled {
+    list-style: none !important;
+    padding: 0 !important;
+}
+
+.bg-white-50 {
+    background-color: rgba(255, 255, 255, 0.5) !important;
+}
+
+/* التباعد العام */
+section {
+    padding: 80px 0;
+}
+
+.mb-4 {
+    margin-bottom: 1.5rem !important;
+}
+
+.mb-5 {
+    margin-bottom: 3rem !important;
+}
+
+.mt-5 {
+    margin-top: 3rem !important;
+}
+
+.py-5 {
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
+}
+
+/* ========== وضع الظلام ========== */
+[data-theme="dark"] {
+    --light-color: #121212;
+    --dark-color: #ffffff;
+    --gray-color: #b0b0b0;
+}
+
+[data-theme="dark"] body {
+    background-color: var(--light-color);
+    color: var(--dark-color);
+}
+
+[data-theme="dark"] .navbar {
+    background-color: #1a1a1a !important;
+}
+
+[data-theme="dark"] .card,
+[data-theme="dark"] #contact form {
+    background-color: #2d2d2d;
+    color: var(--dark-color);
+}
+
+[data-theme="dark"] .form-control,
+[data-theme="dark"] .form-select {
+    background-color: #2d2d2d;
+    border-color: #444;
+    color: var(--dark-color);
+}
+
+[data-theme="dark"] .form-control:focus,
+[data-theme="dark"] .form-select:focus {
+    background-color: #2d2d2d;
+    color: var(--dark-color);
+}
+
+[data-theme="dark"] .bg-light {
+    background-color: #1a1a1a !important;
+}
